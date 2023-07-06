@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body {
+      background-image: url('/diego-ph-fIq0tET6llw-unsplash.jpg');
+    }
+
+    .navbar {
+      width: 100%;
+      height: 50px;
+    }
+
+    .navbar ul {
+      height: 50px;
+      margin: 20px auto;
+    }
+
+    .navbar li {
+      list-style: none;
+      margin: 8px;
+      text-align: center;
+    }
+
+    .navbar li a {
+      text-decoration: none;
+      font-size: 25px;
+      color: black;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      margin: 20px;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .btn a {
+      margin: 0 10px;
+    }
+
+    .blog {
+      border: 2px solid gray;
+      border-radius: 20px;
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .mylogo {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .container1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      padding: 23px 12px;
+      margin: 23px 12px;
+      background-color: thistle;
+      box-shadow: -10px 13px 100px 10px rgba(10, 4, 3, 2);
+      border-radius: 10px;
+      width: 300px;
+    }
+
+    .myfooter {
+      border-radius: 30px;
+      height: 200px;
+      margin: 40px auto;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .myboxfooter li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    .myicons {
+      text-align: center;
+    }
+
+    .myicons a {
+      margin: 20px;
+    }
+
+    .copywrite {
+      text-align: center;
+      margin: 20px;
+    }
+  </style>
+
+  <style>
+    @media (min-width: 768px) {
+      .navbar ul {
+        width: 550px;
+      }
+
+      .container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .logo {
+        margin: 20px 0;
+      }
+
+      .btn {
+        margin-top: 0;
+      }
+
+      .btn a {
+        margin: 0 20px;
+      }
+
+      .mylogo {
+        margin: 0;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .container {
+        max-width: 1500px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="logo">
+      <img src="/logo.png" alt="Logo" width="100" height="100">
+    </div>
+
+    <div class="btn">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div class="container1">
+    <div class="card">
+      <h2>Card 1</h2>
+      <p>This is a sample card.</p>
+    </div>
+    <div class="card">
+      <h2>Card 2</h2>
+      <p>This is another sample card.</p>
+    </div>
+    <div class="card">
+      <h2>Card 3</h2>
+      <p>This is a third sample card.</p>
+    </div>
+  </div>
+
+  <div class="myfooter">
+    <ul class="myboxfooter">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="myicons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+
+    <div class="copywrite">
+      &copy; 2023 Your Website. All rights reserved.
+    </div>
+  </div>
+</body>
+
+</html>

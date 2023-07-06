@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Go With Govind</title>
+    <link rel="icon" href="/withGovind-Icon.webp" type="image/jpeg">
+
+    <style>
+        #registration {
+            border: 4px solid rgb(139, 125, 125);
+            margin: 120px;
+            padding: 30px;
+            width: 800px;
+            text-align: center;
+            border-radius: 33px;
+
+        }
+
+        .btn a:hover{
+    background-color: rgb(206, 110, 110);
+    
+}
+        #registration input {
+            width: 300px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 30px;
+        }
+
+
+
+        body {
+            background-image: url("diego-ph-fIq0tET6llw-unsplash.jpg");
+            /* background-repeat: no-repeat,repeat; */
+            /* background-position: center; */
+            /* background-size: cover; */
+        }
+
+        #login {
+            border: 4px solid rgb(139, 125, 125);
+            margin: 120px;
+            padding: 120px;
+            width: 500px;
+            text-align: center;
+            border-radius: 33px;
+        }
+
+        #login input {
+            width: 200px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 30px;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 1200px;
+            border: 2px solid grey;
+            flex-direction: column;
+            /* align-items: center; */
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding: 50px;
+            /* font-size: px; */
+
+        }
+
+        .myfooter {
+            /* background-color: yellow; */
+            /* border: 1px solid black; */
+            border-radius: 30px;
+            height: 200px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 1499px;
+            justify-content: center;
+        }
+
+        .myboxfooter li a {
+            text-decoration: none;
+            list-style: none;
+            /* border: 2px solid rebeccapurple; */
+            color: black;
+        }
+
+        .myboxfooter li {
+            list-style-type: none;
+            /* display: flex; */
+            float: left;
+            margin: 40px;
+
+        }
+
+        .myboxfooter {
+            /* border: 2px solid rebeccapurple; */
+            text-align: center;
+            height: 100px;
+            width: 1499px;
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .govindlogo {
+            width: 300px;
+            margin: 30px auto;
+            padding: 20px 50px;
+            /* border: 2px solid cadetblue; */
+
+        }
+
+        .govindlogo img {
+            height: 100px;
+            margin: 20px;
+        }
+
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px auto;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .fa-pinterest {
+            background: #cb2027;
+            color: white;
+        }
+
+        .fa-snapchat-ghost {
+            background: #fffc00;
+            color: white;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+        .fa-skype {
+            background: #00aff0;
+            color: white;
+        }
+
+        .fa-android {
+            background: #a4c639;
+            color: white;
+        }
+
+        .fa-dribbble {
+            background: #ea4c89;
+            color: white;
+        }
+
+        .fa-vimeo {
+            background: #45bbff;
+            color: white;
+        }
+
+        .fa-tumblr {
+            background: #2c4762;
+            color: white;
+        }
+
+        .fa-vine {
+            background: #00b489;
+            color: white;
+        }
+
+        .fa-foursquare {
+            background: #45bbff;
+            color: white;
+        }
+
+        .fa-stumbleupon {
+            background: #eb4924;
+            color: white;
+        }
+
+        .fa-flickr {
+            background: #f40083;
+            color: white;
+        }
+
+        .fa-yahoo {
+            background: #430297;
+            color: white;
+        }
+
+        .fa-soundcloud {
+            background: #ff5500;
+            color: white;
+        }
+
+        .fa-reddit {
+            background: #ff5700;
+            color: white;
+        }
+
+        .fa-rss {
+            background: #ff6600;
+            color: white;
+        }
+
+        .myicons {
+            /* border: 2px solid rebeccapurple; */
+            width: 1499px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        .myicons a {
+            margin: 20px;
+        }
+
+        .navbar {
+            /* border: 2px solid rebeccapurple; */
+            width: 1100px;
+            height: 50px;
+            margin: 20px auto;
+            padding: 10px 200px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            /* font-size: 10px; */
+        }
+
+        .navbar ul {
+            /* border: 2px solid black; */
+            height: 50px;
+            /* width: 550px; */
+            /* padding: 10px; */
+            margin: 20px auto;
+
+
+        }
+
+        .navbar li {
+            list-style: none;
+            float: left;
+            margin: 8px;
+            text-align: center;
+            /* border: 2px solid darkblue; */
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            font-size: 26px;
+            color: black;
+        }
+
+
+        .mycontainer {
+            /* border: 2px solid darkblue; */
+            display: flex;
+        }
+
+        .logo {
+            margin: 20px;
+        }
+
+        .btn {
+            display: flex;
+        }
+
+        .btn input {
+
+            margin: 20px;
+            height: 50px;
+            border-radius: 20px;
+            width: 120px;
+        }
+
+        .btn a {
+            border: 2px solid black;
+            color: black;
+            background-color: white;
+            width: 100px;
+            height: 20px;
+            margin: 25px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+            text-decoration: none;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mycontainer">
+        <div class="logo">
+            <a href="/index.html"><img src="/cropped-withgovind-logo-350x169-1-200x67.png" alt=""></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Features.html">Features</a></li>
+                <li><a href="/TermsAndCon.html">Services</a></li>
+                <li><a href="/Contact.html">Contact us</a></li>
+                <!-- <li><a href="">About us</a></li> -->
+            </ul>
+        </nav>
+
+        <div class="btn">
+            <!-- <input type="button" value="Call now"> -->
+            <!-- <input type="button" value="Email us"> -->
+            <a href="tel:+919079647482">Call now</a>
+            <a href="mailto:Govind.maiit@gmail.com">Email us</a>
+        </div>
+
+    </div>
+
+    <style>
+        .table_bordered{
+            /* border: 2px solid firebrick; */
+            margin: 20px;
+            padding: 10px;
+            height: 2000px;
+        }
+
+        .heading{
+             /* border: 2px solid darkblue; */
+             height: 20px;
+             
+        }
+    </style>
+   
+    <div class="container">
+        <table class="table_bordered">
+
+
+            <div class="heading">
+            <tbody><tr><td><b>GWG Number</b></td>
+            <td><b>Team</b></td>
+            <td><b>Working window</b></td>
+            </div>
+
+
+
+            </tr><tr><td>1860 266 0811</td>
+            <td>811</td>
+            <td>9.30 AM to 6.30 PM (Monday to Saturday excluding Bank holidays)<br>
+            </td>
+            </tr><tr><td style="width: 25.0%;">1800 266 6666</td>
+            <td>Privy</td>
+            <td>24*7 (only for Optima and Insignia customers)</td>
+            </tr><tr><td>1860 266 2666</td>
+            <td>Banking Related Complaints<br>
+            </td>
+            <td>24*7</td>
+            </tr><tr><td>1860 266 2666</td>
+            <td>Credit card and Credit Card mis-sell Related Helpline<br>
+            </td>
+            <td>24*7</td>
+            </tr><tr><td>1860 266 2666</td>
+            <td>Personal, Payday and Home Loan</td>
+            <td>9:00 AM to 7:00 PM (Monday to Saturday excluding holidays)</td>
+            </tr><tr><td>1800 209 5732</td>
+            <td>Car loan /Two Wheeler Loan</td>
+            <td>Mon - Fri (9:30 AM - 6:30 PM)</td>
+            </tr><tr><td>1800 209 5600</td>
+            <td>Commercial Vehicles Finance Loan / Gold loan / Agriculture loan</td>
+            <td>Mon - Sat (9:30 AM - 6:30 PM, Except on Bank Holidays)&nbsp;</td>
+            </tr><tr><td>1860 266 2666</td>
+            <td>Personal, Payday and Home Loan</td>
+            <td>9:00 AM to 7:00 PM (Monday to Saturday excluding holidays)</td>
+            </tr><tr><td>1800 209 0000</td>
+            <td>Fraud or any unauthorized transaction in your Account / Credit Card</td>
+            <td>24*7</td>
+            </tr><tr><td>1860 266 7777</td>
+            <td>Consumer Durable Loan, Smart EMI Card, Debit Card EMI</td>
+            <td>09:30 AM to 07:00 PM (Monday to Saturday excluding holidays)</td>
+            </tr><tr><td>1860 2666 888 (Local call charges applied)</td>
+            <td>NETC Fastag</td>
+            <td>24*7<br>
+            </td>
+            </tr><tr><td>1800 3006 9090&nbsp;</td>
+            <td>NETC Fastag</td>
+            <td>24*7<br>
+            </td>
+            </tr><tr><td>1860 266 5700</td>
+            <td>Agri SME Business</td>
+            <td>Monday to Saturday (9:30 am to 6:30 pm, excluding holidays)<br>
+            </td>
+            </tr></tbody></table>
+    </div>
+
+
+    
+
+    <div class="myfooter">
+        <div class="myboxfooter">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="/Features.html">Features</a></li>
+                <li><a href="/TermsAndCon.html">Services</a></li>
+                <li><a href="/Contact.html">Contact us</a></li>
+                <!-- <li><a href="">About us</a></li> -->
+            </ul>
+        </div> <br>
+        <hr>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur labore eveniet laudantium iste ab! Quis
+            dolor, qui consequuntur hic explicabo eum nisi itaque molestiae minima excepturi neque omnis vero animi.
+        </p>
+        <!-- Add font awesome icons -->
+        <div class="myicons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+
+    </div>
+
+    <div></div>
+    <!-- <h2>Style Social Media Buttons</h2> --> <br>
+    <hr>
+
+    <div class="copywrite">
+
+        <p> &copy; 2023 Copyright : GWG india bank &nbsp; <b>Founder : Govind Gupta</b></p>
+        <h4></h4>
+    </div>
+
+    <style>
+        .copywrite {
+            height: 20px;
+            margin: 20px auto;
+            /* border: 2px solid darkblue; */
+        }
+    </style>
+
+
+
+</body>
+
+</html>

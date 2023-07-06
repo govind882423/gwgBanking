@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Registration.html"><style>
+         body{
+            background-image: url("diego-ph-fIq0tET6llw-unsplash.jpg");
+            /* background-repeat: no-repeat,repeat; */
+            /* background-position: center; */
+            /* background-size: cover; */
+            margin: 10px;
+        }
+         .navbar {
+            /* border: 2px solid rebeccapurple; */
+            width: 1500px;
+            height: 50px;
+        }
+
+        .navbar ul {
+            /* border: 2px solid black; */
+            height: 50px;
+            width: 550px;
+            margin: 20px auto;
+
+
+        }
+
+        .navbar li {
+            list-style: none;
+            float: left;
+            margin: 8px;
+            text-align: center;
+            /* border: 2px solid darkblue; */
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+            /* margin: 0px; */
+        }
+
+        .mycontainer {
+            /* border: 2px solid darkblue; */
+            display: flex;
+        }
+
+        .logo {
+            /* border: 2px solid darkblue; */
+            /* width: 700px; */
+            /* margin: 50px auto; */
+        }
+
+       
+
+
+
+        .btn {
+            display: flex;
+        }
+
+        .btn input {
+
+            margin: 20px;
+            height: 50px;
+            border-radius: 20px;
+            width: 120px;
+        }
+
+        .btn a {
+            border: 2px solid black;
+            color: black;
+            background-color: white;
+            width: 100px;
+            height: 20px;
+            margin: 25px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+            text-decoration: none;
+
+
+        }
+        .balance{
+            display: flex;
+            width: 800px;
+            border: 2px solid gray;
+            border-radius: 50px;
+            margin: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .balance button {
+            margin: 20px;
+            height: 50px;
+            width: 85px;
+            align-items: center;
+        }
+
+        .mydata1{
+            border: 2px solid gray;
+            padding: 20px;
+            border-radius: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- <a href="/index.html"><img src="/cropped-withgovind-logo-350x169-1-200x67.png" alt=""></a> -->
+    <div class="mycontainer">
+        <div class="logo">
+            <a href="/index.html"><img src="/cropped-withgovind-logo-350x169-1-200x67.png" alt=""></a>
+        </div>
+        <!-- <nav class="navbar">
+            <ul>
+                <div class="logo">
+                    <a href="/index.html"><img src="/cropped-withgovind-logo-350x169-1-200x67.png" alt=""></a>
+                </div>
+            </ul>
+        </nav> -->
+
+         <!-- <div class="btn">
+          
+            <a href="tel:+919079647482">Call now</a>
+            <a href="mailto:Govind.maiit@gmail.com">Email us</a>
+        </div> -->
+
+    </div>
+
+    <div class="mydata1">
+    <h2> Dear <span id="meraname"></span> </h2>
+    <h4>Your Account Number is : <span id="meraAcc"></span></h4>
+    <h4>Your Phone Number is : <span id="meraPhn"></span></h4>
+    <h4>Your City : <span id="meraCity"></span></h4>
+    <h4>Your Email is : <span id="meraEmail"></span></h4>
+    <h4>Your Password is : <span id="meraPass"></span></h4>
+
+    <hr>
+
+     <div class="balance">
+     <h3> Your Current Balance is : </h3>    <p id="mybal">hello</p>
+
+
+
+     <button onclick="withdraw()" class="btn">Withdrawal</button>
+     <button onclick="deposit()"  class=" btn">Deposit</button>
+    </div>
+</div>
+
+    <style>
+      
+    </style>
+
+
+
+    <script>
+        var nameval = localStorage.getItem('myname');
+        var emailValue = localStorage.getItem('myemail');
+        
+        var cityValue = localStorage.getItem('mycity');
+        var phoneValue = localStorage.getItem('myphone');
+        var passValue = localStorage.getItem('mypass');
+
+        var balValue =   parseFloat(localStorage.getItem('mybalance'));
+
+
+        document.getElementById("meraname").innerHTML = nameval;
+        document.getElementById("meraAcc").innerHTML = phoneValue;
+        document.getElementById("meraPhn").innerHTML = phoneValue;
+        document.getElementById("meraCity").innerHTML = cityValue;
+        document.getElementById("meraEmail").innerHTML = emailValue
+        document.getElementById("meraPass").innerHTML = passValue
+        document.getElementById("mybal").innerHTML = balValue;
+
+        // console.log(balValue + 100);
+
+
+        var  withdraw ;
+        var lastwithdraw;
+
+        function withdraw(){
+              withdraw = parseFloat (prompt("Enter your money your want to Withdraw"));
+             balValue = parseFloat(balValue - withdraw);
+
+             document.getElementById("mybal").innerHTML = balValue;
+             console.log("last withdraw " + withdraw)
+      
+           }
+
+         var deposit;
+         var lastdeposit;
+
+         function deposit()
+         {
+            deposit = parseFloat(prompt("Enter money you want to deposit"));
+            balValue =  parseFloat( balValue + deposit);
+          
+            document.getElementById("mybal").innerHTML = balValue;
+
+            console.log("last deposit " + deposit);
+            
+         }  
+
+
+
+    </script>
+</body>
+
+</html>

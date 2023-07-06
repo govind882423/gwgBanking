@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Go With Govind</title>
+    <link rel="icon" href="/withGovind-Icon.webp" type="image/jpeg">
+
+    <style>
+        #registration {
+            border: 4px solid rgb(139, 125, 125);
+            margin: 120px;
+            padding: 30px;
+            width: 800px;
+            text-align: center;
+            border-radius: 33px;
+
+        }
+
+        #registration input {
+            width: 300px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 30px;
+        }
+
+
+
+        body {
+            background-image: url("diego-ph-fIq0tET6llw-unsplash.jpg");
+            /* background-repeat: no-repeat,repeat; */
+            /* background-position: center; */
+            /* background-size: cover; */
+        }
+
+        #login {
+            border: 4px solid rgb(139, 125, 125);
+            margin: 120px;
+            padding: 120px;
+            width: 500px;
+            text-align: center;
+            border-radius: 33px;
+        }
+
+        #login input {
+            width: 200px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 30px;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 1200px;
+            border: 2px solid grey;
+            flex-direction: column;
+            align-items: center;
+
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding: 50px;
+            /* font-size: px; */
+        }
+
+        .myfooter {
+            /* background-color: yellow; */
+            /* border: 1px solid black; */
+            border-radius: 30px;
+            height: 200px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 1499px;
+            justify-content: center;
+        }
+
+        .myboxfooter li a {
+            text-decoration: none;
+            list-style: none;
+            /* border: 2px solid rebeccapurple; */
+            color: black;
+        }
+
+        .myboxfooter li {
+            list-style-type: none;
+            /* display: flex; */
+            float: left;
+            margin: 40px;
+
+        }
+
+        .myboxfooter {
+            /* border: 2px solid rebeccapurple; */
+            text-align: center;
+            height: 100px;
+            width: 1499px;
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .govindlogo {
+            width: 300px;
+            margin: 30px auto;
+            padding: 20px 50px;
+            /* border: 2px solid cadetblue; */
+
+        }
+
+        .govindlogo img {
+            height: 100px;
+            margin: 20px;
+        }
+
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px auto;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .btn a:hover {
+            background-color: rgb(206, 110, 110);
+
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .fa-pinterest {
+            background: #cb2027;
+            color: white;
+        }
+
+        .fa-snapchat-ghost {
+            background: #fffc00;
+            color: white;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+        .fa-skype {
+            background: #00aff0;
+            color: white;
+        }
+
+        .fa-android {
+            background: #a4c639;
+            color: white;
+        }
+
+        .fa-dribbble {
+            background: #ea4c89;
+            color: white;
+        }
+
+        .fa-vimeo {
+            background: #45bbff;
+            color: white;
+        }
+
+        .fa-tumblr {
+            background: #2c4762;
+            color: white;
+        }
+
+        .fa-vine {
+            background: #00b489;
+            color: white;
+        }
+
+        .fa-foursquare {
+            background: #45bbff;
+            color: white;
+        }
+
+        .fa-stumbleupon {
+            background: #eb4924;
+            color: white;
+        }
+
+        .fa-flickr {
+            background: #f40083;
+            color: white;
+        }
+
+        .fa-yahoo {
+            background: #430297;
+            color: white;
+        }
+
+        .fa-soundcloud {
+            background: #ff5500;
+            color: white;
+        }
+
+        .fa-reddit {
+            background: #ff5700;
+            color: white;
+        }
+
+        .fa-rss {
+            background: #ff6600;
+            color: white;
+        }
+
+        .myicons {
+            /* border: 2px solid rebeccapurple; */
+            width: 1499px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        .myicons a {
+            margin: 20px;
+        }
+
+        .navbar {
+            /* border: 2px solid rebeccapurple; */
+            width: 1100px;
+            height: 50px;
+            margin: 20px auto;
+            padding: 10px 200px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            /* font-size: 10px; */
+        }
+
+        .navbar ul {
+            /* border: 2px solid black; */
+            height: 50px;
+            /* width: 550px; */
+            /* padding: 10px; */
+            margin: 20px auto;
+
+
+        }
+        .navbar li {
+            list-style: none;
+            float: left;
+            margin: 8px;
+            text-align: center;
+            /* border: 2px solid darkblue; */
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            font-size: 26px;
+            color: black;
+        }
+
+        .mycontainer {
+            /* border: 2px solid darkblue; */
+            display: flex;
+        }
+
+        .logo {
+            margin: 20px;
+        }
+
+        .btn {
+            display: flex;
+        }
+
+        .btn input {
+
+            margin: 20px;
+            height: 50px;
+            border-radius: 20px;
+            width: 120px;
+        }
+
+        .btn a {
+            border: 2px solid black;
+            color: black;
+            background-color: white;
+            width: 100px;
+            height: 20px;
+            margin: 25px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+            text-decoration: none;
+
+
+        }
+
+        .logo1 {
+            border: 2px solid grey;
+            width: 250px;
+            padding: 10px;
+            /* align-items: center; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .logo1 img {
+            width: 100px;
+            margin: 20px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+        }
+
+        .logo .logo1 {
+            display: flex;
+            flex-direction: column;
+            margin: 35px;
+        }
+
+        .para2 {
+                width: 550px;
+                margin: 70px;
+                border: 2px solid gray;
+                height: 200px;
+                padding: 10px;
+            }
+
+            .mypara2 {
+                display: flex;
+                /* padding: 200px; */
+                text-align: center;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="mycontainer">
+        <div class="logo">
+            <a href="/index.html"><img src="/cropped-withgovind-logo-350x169-1-200x67.png" alt=""></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Features.html">Features</a></li>
+                <li><a href="/TermsAndCon.html">Services</a></li>
+                <li><a href="/Contact.html">Contact us</a></li>
+                <!-- <li><a href="">About us</a></li> -->
+            </ul>
+        </nav>
+
+        <div class="btn">
+            <!-- <input type="button" value="Call now"> -->
+            <!-- <input type="button" value="Email us"> -->
+            <a href="tel:+919079647482">Call now</a>
+            <a href="mailto:Govind.maiit@gmail.com">Email us</a>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="heading1">
+            <h1>Features of the 811 Digital Savings Account
+            </h1>
+        </div>
+
+
+        <div class="para1">
+            <p>Saving money in the 811 digital savings account can help you maximize your benefits. GWG Mahindra Bank
+                is India’s first new-age financial company to introduce a no-minimum balance digital savings account.
+                GWG 811 digital savings account is available in 2 variants, each catering to specific spending habits
+                of customers. With zero-contact and video-KYC benefits, open a GWG 811 digital savings account
+                anytime, and from anywhere. Avail the best online banking solutions in just a few clicks. Open an online
+                savings account with us and explore our wide range of offerings now! Take a look.</p>
+        </div>
+
+
+        <div class="logo">
+            <div class="logo1">
+                <div class="img1">
+                    <img src="/Free-NEFT_&_RTGS.png" alt="">
+                </div>
+                <div class="para1">Transfer money online through IMP's NEFT and UPI without paying any fee</div>
+            </div>
+
+            <div class="logo1">
+                <div class="img1">
+                    <img src="/Fuel_Surcharge_Waiver.png" alt="">
+                </div>
+                <div class="para1">Transfer money online through IMP's NEFT and UPI without paying any fee</div>
+            </div>
+
+            <div class="logo1">
+                <div class="img1">
+                    <img src="/functionality-statement.png" alt="">
+                </div>
+                <div class="para1">Transfer money online through IMP's NEFT and UPI without paying any fee</div>
+            </div>
+
+            <div class="logo1">
+                <div class="img1">
+                    <img src="/go-digital.png" alt="">
+                </div>
+                <div class="para1">Transfer money online through IMP's NEFT and UPI without paying any fee</div>
+            </div>
+        </div>
+
+        <div class="heading1">
+            <div class="head1">
+                <h1>Types of 811 Digital Savings Account
+                </h1>
+            </div>
+        </div>
+
+
+        <div class="mypara2">
+            <div class="para2">
+                <div class="heading">
+                    <h2 style="color:  darkslategray;">GWG Savings Account</h2>
+                    <p>GWG 811 Digital Savings Account is a one-stop banking solution for hassle-free online
+                        transactions. Enjoy a fully digitalised verification process with 811 Video KYC and start using
+                        this account instantly. Manage your digital account with a single click and track all current
+                        transactions anytime, anywhere. Open an online savings account with GWG Mahindra Bank.  <a href="">Know more</a></p>
+                        
+                </div>
+            </div>
+
+            <div class="para2">
+                <div class="heading">
+                    <h2 style="color:  darkslategray;">GWG Edge Savings Account
+                    </h2>
+
+                    <p>Upgrade to GWG 811 Edge savings account. Maintain a minimum account balance of Rs. 10,000 per
+                        month and leverage facilities like free online funds transfer via IMPS, NEFT and RTGS. Elevate
+                        online shopping experience with Platinum Debit Card. Choose GWG 811 to open an online savings
+                        account.
+                         <a href="">Know more</a>
+                    </p>
+
+                </div>
+            </div>
+
+            
+            
+        </div>
+        
+        <div class="mylist">
+            <h3>Business Correspondents 811 (For Full KYC Conversion)</h3>
+             <ul>
+                <li>
+                    Airan Ltd
+                </li>
+                <li>Fino Payments Bank Ltd
+                </li>
+
+                <li>Smart Chips Pvt Ltd (Idemia)
+                </li>
+
+                <li>Writer Business Services Pvt Ltd
+                </li>
+
+                <li>Atyati Technologies Pvt. Ltd.
+                </li>
+
+                <li>Apna Payment Services Pvt. Limited
+                </li>
+             </ul>
+        </div>
+
+
+       
+    </div>
+
+
+
+    <div class="myfooter">
+        <div class="myboxfooter">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="/Features.html">Features</a></li>
+                <li><a href="/TermsAndCon.html">Services</a></li>
+                <li><a href="/Contact.html">Contact us</a></li>
+                <!-- <li><a href="">About us</a></li> -->
+            </ul>
+        </div> <br>
+        <hr>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur labore eveniet laudantium iste ab! Quis
+            dolor, qui consequuntur hic explicabo eum nisi itaque molestiae minima excepturi neque omnis vero animi.
+        </p>
+        <!-- Add font awesome icons -->
+        <div class="myicons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+
+    </div>
+
+    <div></div>
+    <!-- <h2>Style Social Media Buttons</h2> --> <br>
+    <hr>
+
+    <div class="copywrite">
+
+        <p> &copy; 2023 Copyright : GWG india bank &nbsp; <b>Founder : Govind Gupta</b></p>
+        <h4></h4>
+    </div>
+
+    <style>
+        .copywrite {
+            height: 20px;
+            margin: 20px auto;
+            /* border: 2px solid darkblue; */
+        }
+    </style>
+
+
+
+</body>
+
+</html>
